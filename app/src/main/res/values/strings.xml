@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejercicio3A2</string>
+    <string name="nombre">Nombre</string>
+    <string name="textview">TextView</string>
+    <string name="button">Button</string>
+    <string name="celular">Celular</string>
+</resources>
