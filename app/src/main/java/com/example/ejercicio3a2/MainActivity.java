@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         inicializarVistas();
         /*
@@ -71,6 +71,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             this.celular = this.celular / 10;
         }
         txtResultado.setText("Valor invertido: "+invertido);
+    }
+
+    /*
+    Metodo para invertir una cadena de Texto
+     */
+    private void invertirTexto() {
+        String invertido = "";
+        //metodo en los strings que les permite
+        //acceder a cada letra de la cadena
+        //y devuelve esa letra como un caracter simple o char
+        for (int i = this.nombre.length() - 1; i >= 0; i--) {
+            invertido += this.nombre.charAt(i);
+        }
+        txtResultado.setText(invertido);
     }
 
     // 3 formas de usar el boton

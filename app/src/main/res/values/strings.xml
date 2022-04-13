@@ -4,4 +4,7 @@
     <string name="textview">TextView</string>
     <string name="button">Button</string>
     <string name="celular">Celular</string>
+    <string name="btn_invertir">Invertir</string>
+    <string name="btn_procesar">Invertir Texto</string>
+    <string name="txt_prueba">Esto es un texto de prueba</string>
 </resources>
