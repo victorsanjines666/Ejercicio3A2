@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Atributos que representen cada elemento visual que diseñen
     //NOTA: Elemento visual que van a usar como codigo
     private TextView txtResultado;
-    private Button btnInvertir;
+    private Button btnInvertir, btnProcesarTexto;
     private EditText etNombre, etCelular;
     //Atributos de clase
     private String nombre;
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Listener -> algo que esta pendiente a que pase cierto esa
          */
         btnInvertir.setOnClickListener(this);
+        btnProcesarTexto.setOnClickListener(this);
     }
 
     private void inicializarVistas() {
@@ -47,9 +48,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         etCelular = findViewById(R.id.etCelular);
         txtResultado = findViewById(R.id.txtResultado);
         btnInvertir = findViewById(R.id.btnInvertir);
+        btnProcesarTexto = findViewById(R.id.btnProcesarTexto);
     }
 
-    private void obtenerInformacionUsuario(){
+    private void obtenerInformacionUsuario() {
         /*
         Para obtener la informacion que el usuario introduce en los
         campos de texto. Ustedes van a obtener esos valores del
@@ -87,12 +89,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtResultado.setText(invertido);
     }
 
-    // 3 formas de usar el boton
+    // 3 formas de usar el evento click
+    // en este caso para un boton
     // Forma 2:
 
     @Override
     public void onClick(View view) {
+        // Van a obtener el valor que hace unico a
+        //cada componente visual
         obtenerInformacionUsuario();
-        invertirNumero();
+        switch (view.getId()) {
+            case R.id.btnInvertir:
+                invertirNumero();
+                break;
+            case R.id.btnProcesarTexto:
+                invertirTexto();
+                break;
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
